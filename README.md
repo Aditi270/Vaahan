@@ -1,22 +1,14 @@
-# 🧠 Research Paper Summarization & Podcast API
+# Research Paper Summarization 
 
-> **Problem Statement:**  
-Staying updated on research across multiple fields is challenging and time-consuming. Create a system that can search for relevant research papers, process them, organize and summarize them by topic, and create accessible audio summaries.
+> **Objective:**  
+A multi-agent system that can find, analyze, and summarize research papers from various 
+sources, organize them by topic, and generate audio podcasts discussing the findings..
 
 ---
 
-## 🚀 Project Overview
+## Overview
 
-I built a **FastAPI-based backend service** that allows users to:
-- Upload academic papers (PDF)
-- Extract research topics
-- Generate long-form LLM-based summaries (via DeepSeek)
-- Synthesize multiple paper summaries into one
-- Generate audio podcasts from summaries (gTTS)
-- Search research papers using arXiv API
-
-It’s modular, API-first, and designed for integration with an interactive frontend.
-
+I built a FastAPI‑powered, modular backend that serves as the core of an interactive research assistant. The system allows users to upload academic papers in PDF format, automatically extract their key research topics, and generate long‑form summaries using DeepSeek. It can also synthesize multiple summaries into a single cohesive overview and convert these summaries into audio podcasts with gTTS. In addition, the service integrates with the arXiv API to search for related research papers. Designed with an API‑first approach, it is optimized for seamless integration with a modern, interactive frontend.
 ---
 
 ## 🔍 Focus Areas
@@ -28,74 +20,44 @@ It’s modular, API-first, and designed for integration with an interactive fron
 
 ---
 
-## 🧪 Technology Choices
+## Technology Stack 
 
-| Component          | Tech Used                  | Justification                          |
-|-------------------|----------------------------|----------------------------------------|
-| Backend Framework | FastAPI                    | Fast, async-ready, great with OpenAPI  |
-| Summarizer        | DeepSeek (via OpenRouter)  | Cutting-edge LLM for summarization     |
-| Audio Generator   | gTTS (Google TTS)          | Lightweight and effective TTS          |
-| PDF Parser        | PyMuPDF                    | Accurate and fast                      |
-| Deployment        | Render                     | Quick cloud deployment                 |
-| summarization     | Facebook-Bert Model        | Quick Without Api-Key set up           |
+Backend Framework – FastAPI
+🚀 Why: Lightning‑fast, async‑ready, and integrates seamlessly with OpenAPI for auto‑docs.
+
+Summarization Engine – DeepSeek (via OpenRouter)
+🧠 Why: Harnesses a cutting‑edge LLM to produce rich, context‑aware research summaries.
+
+Audio Generation – gTTS (Google Text‑to‑Speech)
+🎧 Why: Lightweight, reliable, and perfect for turning summaries into on‑the‑go audio podcasts.
+
+PDF Parsing – PyMuPDF
+📄 Why: Efficient, accurate, and quick for extracting text from academic papers.
+
+Deployment – Render
+☁️ Why: Enables simple, quick cloud deployment with minimal setup.
+
+Additional Summarization – Facebook BERT Model
+⚡ Why: Provides a fast, key‑point summarization option that works without API‑key configuration.
 ---
 
-## 🧹 Features
-
-| Feature               | Description                              |
-|----------------------|------------------------------------------|
-| 📄 PDF Upload         | Accepts and stores academic PDFs         |
-| 🧠 Text Extraction    | From PDF or direct URL                   |
-| 🧪 Topic Classification | Using Jina Embeddings                   |
-| ✍️ Summarization      | Detailed summary using DeepSeek LLM      |
-| 🔊 Podcast Audio      | Converts summaries to `.mp3`             |
-| 📚 Paper Search       | Pulls results from arXiv                 |
-| 🧵 Cross-Paper Synthesis | Smart merging of multiple summaries     |
-
----
-
-## 📁 Folder Structure
+## Structure
 
 ```
 .
-├── main.py                  # FastAPI app
-├── requirements.txt         # Python dependencies
-├── agents/                  # Individual agents
-│   ├── processing_agent.py
-│   ├── topic_classifier.py
-│   ├── summarizer_agent.py
-│   ├── podcast_agent.py
-│   ├── search_agent.py
-│   └── synthesis_agent.py
-├── uploads/                 # Uploaded PDFs
-├── audio/                   # Output podcast audio
+├── main.py                  
+├── requirements.txt         
+├── agents/                  
+│   ├── Processor.py
+│   ├── Classification.py
+│   ├── Summarizer.py
+│   ├── Podcast.py
+│   ├── Search.py
+│   └── Synthesis.py
+├── uploads/                 
+├── audio/                   
 ```
-
----
-
-## 🔌 API Endpoints
-
-| Endpoint         | Method | Description                        |
-|------------------|--------|------------------------------------|
-| `/upload/`       | POST   | Upload a research paper (PDF)      |
-| `/classify/`     | POST   | Classify topic of uploaded paper   |
-| `/summarize/`    | POST   | Summarize a single uploaded paper  |
-| `/audio/`        | POST   | Convert summary to `.mp3` audio    |
-| `/search/`       | GET    | Search papers using arXiv API      |
-| `/process/url/`  | POST   | Extract text from a research URL   |
-| `/synthesize/`   | POST   | Merge multiple summaries intelligently |
-
-**Sample Input (for `/classify/`):**
-```json
-{
-  "filename": "Real-Time_Detection_of_AI-Generated_Deepfake_Audio_A_Novel_Approach.pdf",
-  "topics": ["AI", "Cybersecurity", "Audio Forensics"]
-}
-```
-
----
-
-## ⚙️ Setup Instructions
+## Setup
 
 ### Local 
 
@@ -112,78 +74,18 @@ Visit: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 ---
 wait for sometimes it may show error but for sometimes but start automatically due to high weight models being used .
 
-![Api Application](screenshots/Application.png)
+## Snippets
 
-## 🧠 Multi-Agent Overview
+<img width="1151" height="625" alt="image" src="https://github.com/user-attachments/assets/d197582d-1fa4-4336-a27e-c0de882f8f77" />
 
-| Agent              | Role                                     |
-|-------------------|------------------------------------------|
-| `processing_agent`| Extract text from PDF or URLs            |
-| `topic_classifier`| Classify paper using topic embeddings    |
-| `summarizer_agent`| DeepSeek-based summarization             |
-| `podcast_agent`   | Generate `.mp3` audio via gTTS           |
-| `search_agent`    | Search academic papers via arXiv API     |
-| `synthesis_agent` | Smart merge of multiple paper summaries  |
+<img width="1247" height="629" alt="image" src="https://github.com/user-attachments/assets/b5593fd6-549d-4bd5-8b14-c3477b811447" />
 
----
+<img width="1348" height="619" alt="image" src="https://github.com/user-attachments/assets/9f682e60-37ad-49fb-9df0-9e6dc28fc1ef" />
 
-## 🧪 Sample File Provided
+<img width="1118" height="515" alt="image" src="https://github.com/user-attachments/assets/f91a159f-c5f6-477d-a94a-61c47ab46049" />
 
-- ✅ `Real-Time_Detection_of_AI-Generated_Deepfake_Audio_A_Novel_Approach.pdf`  
-Upload this via `/upload/` and use in `/summarize/`, `/audio/`, `/classify/`.
-
----
-
-## 🗀 Screenshots or Demo
-
-###  Upload
-![Upload](screenshots/upload_input.png)
-![Upload](screenshots/upload_output.png)
-
-###  Summarize
-![Summary Screenshot](screenshots/summarization_input.png)
-![Summary Screenshot](screenshots/summarization_output.png)
-
-###  Audio
-![Audio Screenshot](screenshots/audio_input.png)
-![Audio Screenshot](screenshots/audio_output.png)
-
-###  classification
-![classificaation Screenshot](screenshots/classification_input.png)
 ![classification Screenshot](screenshots/classification_output.png)
 
-###  Search
-![search Screenshot](screenshots/search_input.png)
-![search Screenshot](screenshots/search_output.png)
-
-### process_url
-![url Screenshot](screenshots/url_input.png)
 ![url Screenshot](screenshots/url_output.png)
 
-
-### synthesize
 ![synthesize Screenshot](screenshots/synthesize_input.png)
-
-
-
----
-
-## 🧠 Justification & Design Decisions
-
-- Used DeepSeek LLM for long-form summarization (better than DistilBART for this task)
-- used Facebook-Bert Model for easy without Api Key set up
-- FastAPI chosen for its speed, async support, and native Swagger docs
-- Clear separation of concern: each function is handled by a dedicated agent
-
----
-
-## 🧠 Final Notes
-
-This project showcases:
-- ✅ LLM integration (DeepSeek/OpenRouter)
-- ✅ Modular backend architecture
-- ✅ Core ML + NLP pipeline
-- ✅ Real-world APIs + tools
-- ✅ Production deployment on Render
-
----

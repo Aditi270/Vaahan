@@ -1,17 +1,14 @@
-# Research Paper Summarization 
-
-> **Objective:**  
+# Research Paper Summarization  
 A multi-agent system that can find, analyze, and summarize research papers from various 
 sources, organize them by topic, and generate audio podcasts discussing the findings..
 
 ---
 
-## Overview
-
+# Overview
 I built a FastAPI‑powered, modular backend that serves as the core of an interactive research assistant. The system allows users to upload academic papers in PDF format, automatically extract their key research topics, and generate long‑form summaries using DeepSeek. It can also synthesize multiple summaries into a single cohesive overview and convert these summaries into audio podcasts with gTTS. In addition, the service integrates with the arXiv API to search for related research papers. Designed with an API‑first approach, it is optimized for seamless integration with a modern, interactive frontend.
 ---
 
-## 🔍 Focus Areas
+# Focus Areas
 
 - 🧱 Modular architecture with isolated agents
 - 🚀 API-first development with FastAPI
@@ -20,7 +17,7 @@ I built a FastAPI‑powered, modular backend that serves as the core of an inter
 
 ---
 
-## Technology Stack 
+# Technology Stack 
 
 Backend Framework – FastAPI
 🚀 Why: Lightning‑fast, async‑ready, and integrates seamlessly with OpenAPI for auto‑docs.
@@ -74,8 +71,7 @@ Visit: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 ---
 wait for sometimes it may show error but for sometimes but start automatically due to high weight models being used .
 
-## Snippets
-
+# Snippets
 <img width="1151" height="625" alt="image" src="https://github.com/user-attachments/assets/d197582d-1fa4-4336-a27e-c0de882f8f77" />
 
 <img width="1247" height="629" alt="image" src="https://github.com/user-attachments/assets/b5593fd6-549d-4bd5-8b14-c3477b811447" />

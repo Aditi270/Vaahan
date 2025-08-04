@@ -72,16 +72,13 @@ Visit: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 wait for sometimes it may show error but for sometimes but start automatically due to high weight models being used .
 
 # Snippets
-<img width="1151" height="625" alt="image" src="https://github.com/user-attachments/assets/d197582d-1fa4-4336-a27e-c0de882f8f77" />
 
-<img width="1247" height="629" alt="image" src="https://github.com/user-attachments/assets/b5593fd6-549d-4bd5-8b14-c3477b811447" />
-
-<img width="1348" height="619" alt="image" src="https://github.com/user-attachments/assets/9f682e60-37ad-49fb-9df0-9e6dc28fc1ef" />
-
-<img width="1118" height="515" alt="image" src="https://github.com/user-attachments/assets/f91a159f-c5f6-477d-a94a-61c47ab46049" />
-
+![classification Screenshot](screenshots/Application.png)
+![classification Screenshot](screenshots/audio_output.png)
+![classification Screenshot](screenshots/audio_input.png)
+![classification Screenshot](screenshots/search_output.png)
+![classification Screenshot](screenshots/classification_input.png)
 ![classification Screenshot](screenshots/classification_output.png)
-
+![classification Screenshot](screenshots/summarization_output.png)
 ![url Screenshot](screenshots/url_output.png)
-
 ![synthesize Screenshot](screenshots/synthesize_input.png)
